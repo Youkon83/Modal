@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <script type="text/javascript" src="script.js"></script>
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <title>Modal</title>
+  </head>
+
+  <body>
+    <div class= "modal js-modal">
+      <h1>Modal!</h1>
+      <p>Text popped up</p>
+      <p><button class="close-modal">Close Modal</button></p>
+    </div>
+
+    <button class="open-modal">OPEN MODAL</button>
+
+    <script> 
+    const openBtn = document.querySelector(".open-modal");
+    const closeBtn = document.querySelector(".close-modal");
+    const modal = new Modal()
+    
+    openBtn.addEventListener('click', function(e){
+      modal.open();
+    })
+    closeBtn.addEventListener('click', function(e){
+      modal.close();
+    })
+  </script>
+
+  </body>
+</html>
